@@ -11,12 +11,23 @@ parts:
   - caption: Methods
     chapters:
     - file: 2-1_materials
+    - file: 2-2_protocol
+    - file: 2-3_dataprocessing
+      sections:
+      - file: 2-3-1_fitting
+      - file: 2-3-2_labelreg
+      - file: 2-3-3_analysis
   - caption: Results
     chapters:
-    - file: results
+    - file: 3-1_submissions
+    - file: 3-2_nist
+    - file: 3-3_humans
+    - file: 3-4_dashboard
   - caption: Discussion
     chapters:
-    - file: discussion
+    - file: 4-1_achievements
+    - file: 4-2_comparisons
+    - file: 4-3_lessons
   - caption: Conclusion
     chapters:
     - file: conclusion
