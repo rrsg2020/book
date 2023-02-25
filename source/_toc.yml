@@ -2,8 +2,30 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
-chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+root: index
+
+parts:
+  - caption: Introduction
+    chapters:
+    - file: intro
+  - caption: Methods
+    chapters:
+    - file: methods
+  - caption: Results
+    chapters:
+    - file: results
+  - caption: Discussion
+    chapters:
+    - file: discussion
+  - caption: Conclusion
+    chapters:
+    - file: conclusion
+  - caption: Acknowledgements
+    chapters:
+    - file: acknowledgments
+  - caption: Data Availability Statement
+    chapters:
+    - file: das
+  - caption: References
+    chapters:
+    - file: references
