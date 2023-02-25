@@ -316,6 +316,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/rrsg2020/book/main?urlpath=tree/source/3-3_humans.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -338,7 +367,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/3-3_humans.md"
+        <a href="_sources/3-3_humans.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -349,7 +378,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -401,12 +430,13 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="human-results">
 <h1>Human results<a class="headerlink" href="#human-results" title="Permalink to this headline">#</a></h1>
-<p>This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a> for more information.</p>
-<p>Check out the content pages bundled with this sample book to see more.</p>
-</section>
+<p style="text-align:justify;">
+Figure 6 summarizes the results from human datasets submitted to this challenge, showing mean and standard deviation T1 values from the WM (genu) and GM (cerebral cortex) ROIs. The top plot collapses all datasets for each site, while the bottom plot shows each dataset separately. Mean WM T1 values across all submissions was 828 ± 38 ms in the genu and 854 ± 50 ms in the splenium, and mean GM T1 values were 1548 ± 156 ms in the cortex and 1188 ± 133 ms in the deep GM, with less variations overall in WM compared to GM possibly due to better ROI placement and less partial voluming in WM. Inter-participant coefficients of variation (COV) for independently-implemented imaging protocols were calculated using one T1 map measurement per submission that most closely matched the proposed protocol, and were 6.0% for genu, 11% for splenium, 16% for cortical GM and 22% for deep GM. One site (site 9) measured multiple subjects on three scanners using two different vendors, and so intra-participant COVs for these centrally-implemented protocols were calculated over acquired T1 maps from this site, and were 2.9% for genu, 3.5% for splenium, 6.9 % for cortical GM and 7.8% for deep GM. It’s important that this site also had the best slice positioning, cutting through the AC-PC line and genu for proper ROI placement, particularly for the corpus callosum and deep GM.
+</p><p style="text-align:justify;">
+<b>
+Figure 6. Mean T1 values in two sets of ROIs, white matter (one 5x5 voxel ROI, genu) and gray matter (three 3x3 voxel ROIs, cortex). Top figure shows all datasets collapsed into sites, whereas the bottom shows each individual dataset.
+</b>
+</p></section>
 
     <script type="text/x-thebe-config">
     {
