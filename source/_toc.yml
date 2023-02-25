@@ -10,7 +10,7 @@ parts:
     - file: intro
   - caption: Methods
     chapters:
-    - file: methods
+    - file: 2-1_materials
   - caption: Results
     chapters:
     - file: results
