@@ -1,11 +1,5 @@
 # Discussions and Study Group Committees
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
-
-Check out the content pages bundled with this sample book to see more.
-
-```{tableofcontents}
-```
+<p style="text-align:justify;">
+The conception of this collaborative reproducibility challenge originated from discussions with experts, including Paul Tofts, Joëlle Barral, and Ilana Leppert, who provided valuable insights. Additionally, Kathryn Keenan, Zydrunas Gimbutas, and Andrew Dienstfrey from NIST provided their code to generate the ROI template for the NIST phantom, which was also helpful. Dylan Roskams-Edris and Gabriel Pelletier from the Tanenbaum Open Science Institute (TOSI) offered valuable insights and guidance related to data ethics and data sharing in the context of this international multi-center conference challenge. The 2020 RRSG study group committee members who launched the challenge, Martin Uecker, Florian Knoll, Nikola Stikov, Maria Eugenia Caligiuri, and Daniel Gallichan, as well as the 2020 qMRSG committee members, Kathryn Keenan, Diego Hernando, Xavier Golay, Annie Yuxin Zhang, and Jeff Gunter, also played an essential role in making this challenge possible. Finally, we extend our thanks to all the volunteers and individuals who helped with the scanning at each imaging site.
+</p>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Achievements of the challenge &#8212; My sample book</title>
+    <title>Achievements of the challenge &#8212; 2020 T1 Reproducibility Challenge</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -97,7 +97,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">My sample book</h1>
+      <h1 class="site-logo" id="site-title">2020 T1 Reproducibility Challenge</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -108,8 +108,8 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="index.html">
-                    Welcome to your Jupyter Book
+                <a class="reference internal" href="abstract.html">
+                    Abstract
                 </a>
             </li>
         </ul>
@@ -120,8 +120,8 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Rationale and Challenge Pitch
+  <a class="reference internal" href="1_introduction.html">
+   Introduction
   </a>
  </li>
 </ul>
@@ -141,8 +141,13 @@ const thebe_selector_output = ".output, .cell_output"
    Protocol
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2-3_datasubmissions.html">
+   Data Submissions
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="2-3_dataprocessing.html">
+  <a class="reference internal" href="2-4_dataprocessing.html">
    Data Processing
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -152,17 +157,17 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="2-3-1_fitting.html">
+    <a class="reference internal" href="2-4-1_fitting.html">
      Fitting Model and Pipeline
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="2-3-2_labelreg.html">
+    <a class="reference internal" href="2-4-2_labelreg.html">
      Image Labeling &amp; Registration
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="2-3-3_analysis.html">
+    <a class="reference internal" href="2-4-3_analysis.html">
      Analysis and Statistics
     </a>
    </li>
@@ -225,7 +230,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="conclusion.html">
+  <a class="reference internal" href="5_conclusion.html">
    Summary
   </a>
  </li>
@@ -401,12 +406,12 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="achievements-of-the-challenge">
 <h1>Achievements of the challenge<a class="headerlink" href="#achievements-of-the-challenge" title="Permalink to this headline">#</a></h1>
-<p>This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a> for more information.</p>
-<p>Check out the content pages bundled with this sample book to see more.</p>
-</section>
+<p style="text-align:justify;">
+</p>
+Nineteen research groups participated in a reproducibility challenge by independently-implementing an inversion recovery T1 mapping acquisition protocol and measuring a standard quantitative MRI phantom and/or human brains at 27 MRI sites, using three different vendors (GE, Philips, Siemens). The collaborative effort produced an open-source database of 97 T1 mapping datasets, including 41 ISMRM/NIST phantom and 56 human brain datasets. A standardized T1 processing pipeline was developed for different dataset types, including magnitude-only and complex data. Additionally, Jupyter notebooks that can be executed in containerized environments were developed for quality assurance visualization and analyses. An interactive web-based dashboard was also developed to allow for easy exploration of the challenge results in a web-browser.
+<p style="text-align:justify;">
+The challenge focused on exploring the reproducibility of the gold standard inversion recovery T1 mapping method reported in one paper (Barral et al. 2010). Participants were instructed to use the imaging protocol reported in this paper that was optimized for human brain T1 values. The paper also shared the necessary code to robustly process inversion recovery T1 mapping data, and is particularly effective even when using a shorter TR (TR ~ T1) than typically reported (TR ~ 5 T1). To evaluate the accuracy of the resulting T1 values, the challenge used the standard ISMRM/NIST phantom with fiducial spheres having T1 values expected in human brain tissue, ranging from 500 to 2000 ms (see Figure 3). As anticipated for this protocol, there was a decrease in the accuracy in measurements for spheres with T1 below 300 ms. Overall, the majority of the independently implemented imaging protocols from various sites resulted in good T1 estimates, with only a few exceptions. Using the NIST phantom, we report that sites that independently-implemented the imaging protocol resulted in an inter-participant mean COV (6.1 %) that was two-times higher than that for an intra-participant mean COV measured at seven sites (2.9 %). A similar trend was observed in vivo. Inter-participant COV for WM (genu) was 6.0 % and GM (cortex) was 16.5 % vs the intra-participant COV that was 2.9 % and 6.9%, with generally higher COVs relative to the phantom measurements likely due to biological variability.
+</p></section>
 
     <script type="text/x-thebe-config">
     {
@@ -456,7 +461,7 @@ It does not go in-depth into any particular topic - check out <a class="referenc
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By The Jupyter Book Community<br/>
+    By The Jupyter Book community<br/>
   
       &copy; Copyright 2022.<br/>
 </p>

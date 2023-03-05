@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Materials &#8212; My sample book</title>
+    <title>Materials &#8212; 2020 T1 Reproducibility Challenge</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Protocol" href="2-2_protocol.html" />
-    <link rel="prev" title="Rationale and Challenge Pitch" href="intro.html" />
+    <link rel="prev" title="Introduction" href="1_introduction.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -97,7 +97,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">My sample book</h1>
+      <h1 class="site-logo" id="site-title">2020 T1 Reproducibility Challenge</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -108,8 +108,8 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="index.html">
-                    Welcome to your Jupyter Book
+                <a class="reference internal" href="abstract.html">
+                    Abstract
                 </a>
             </li>
         </ul>
@@ -120,8 +120,8 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Rationale and Challenge Pitch
+  <a class="reference internal" href="1_introduction.html">
+   Introduction
   </a>
  </li>
 </ul>
@@ -141,8 +141,13 @@ const thebe_selector_output = ".output, .cell_output"
    Protocol
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2-3_datasubmissions.html">
+   Data Submissions
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="2-3_dataprocessing.html">
+  <a class="reference internal" href="2-4_dataprocessing.html">
    Data Processing
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -152,17 +157,17 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="2-3-1_fitting.html">
+    <a class="reference internal" href="2-4-1_fitting.html">
      Fitting Model and Pipeline
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="2-3-2_labelreg.html">
+    <a class="reference internal" href="2-4-2_labelreg.html">
      Image Labeling &amp; Registration
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="2-3-3_analysis.html">
+    <a class="reference internal" href="2-4-3_analysis.html">
      Analysis and Statistics
     </a>
    </li>
@@ -225,7 +230,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="conclusion.html">
+  <a class="reference internal" href="5_conclusion.html">
    Summary
   </a>
  </li>
@@ -401,7 +406,12 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="materials">
 <h1>Materials<a class="headerlink" href="#materials" title="Permalink to this headline">#</a></h1>
-<p><strong>Table 1.</strong> Reference T1 values of the “T1 plate” of the standard phantom (for both phantom versions) measured at 20 °C and 3.0 T. Phantoms with serial numbers 0041 or less are referred to as “Version 1”, and those 0042 or greater are “Version 2”.</p>
+<p style="text-align:justify;">
+The challenge was launched for those with access to the International Society of Magnetic Resonance in Medicine/National Institute of Standards and Technology (ISMRM/NIST) system phantom (Stupic et al. 2021) (Premium System Phantom, CaliberMRI, Boulder, Colorado). Two versions of the phantom have been produced with slightly different quantitative parameters values in the liquid spheres. Phantoms with serial numbers 0041 or less are referred to as “Version 1”, and those 0042 or greater are “Version 2”. The phantom has three plates containing sets of 14 spheres for ranges of proton density (PD), T1 (NiCl2), and T2 (MnCl2) values. Reference T1 values at 20 °C and 3.0 T for the T1 plate are listed in Table 1 for both versions of the phantom. Participants were instructed to record the temperature before and after scanning the phantom using the phantom's internal thermometer. Instructions for positioning and setting up the phantom were provided to participants through the NIST website.
+</p>
+<b style="text-align:justify;">
+Table 1. Reference T1 values of the “T1 plate” of the standard phantom (for both phantom versions) measured at 20 °C and 3.0 T. Phantoms with serial numbers 0041 or less are referred to as “Version 1”, and those 0042 or greater are “Version 2”.
+</b>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Sphere #</p></th>
@@ -415,11 +425,62 @@ title="Print to PDF"
 <td class="text-align:center"><p>1883.97 ± 30.32</p></td>
 </tr>
 <tr class="row-odd"><td class="text-align:left"><p>2</p></td>
+<td class="text-align:center"><p>1454 ± 2.5</p></td>
+<td class="text-align:center"><p>1330.16 ± 20.41</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>3</p></td>
 <td class="text-align:center"><p>984.1 ± 0.33</p></td>
 <td class="text-align:center"><p>987.27 ± 14.22</p></td>
 </tr>
+<tr class="row-odd"><td class="text-align:left"><p>4</p></td>
+<td class="text-align:center"><p>706 ± 1.0</p></td>
+<td class="text-align:center"><p>690.08 ± 10.12</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>5</p></td>
+<td class="text-align:center"><p>496.7 ± 0.41</p></td>
+<td class="text-align:center"><p>484.97 ± 7.06</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>6</p></td>
+<td class="text-align:center"><p>351.5 ± 0.91</p></td>
+<td class="text-align:center"><p>341.58 ± 4.97</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>7</p></td>
+<td class="text-align:center"><p>247.13 ± 0.086</p></td>
+<td class="text-align:center"><p>240.86 ± 3.51</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>8</p></td>
+<td class="text-align:center"><p>175.3 ± 0.11</p></td>
+<td class="text-align:center"><p>174.95 ± 2.48</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>9</p></td>
+<td class="text-align:center"><p>125.9 ± 0.33</p></td>
+<td class="text-align:center"><p>121.08 ± 1.75</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>10</p></td>
+<td class="text-align:center"><p>89.0 ± 0.17</p></td>
+<td class="text-align:center"><p>85.75 ± 1.24</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>11</p></td>
+<td class="text-align:center"><p>62.7 ± 0.13</p></td>
+<td class="text-align:center"><p>60.21 ± 0.87</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>12</p></td>
+<td class="text-align:center"><p>44.53 ± 0.090</p></td>
+<td class="text-align:center"><p>42.89 ± 0.44</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>13</p></td>
+<td class="text-align:center"><p>30.84 ± 0.016</p></td>
+<td class="text-align:center"><p>30.40 ± 0.62</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>14</p></td>
+<td class="text-align:center"><p>21.719 ± 0.005</p></td>
+<td class="text-align:center"><p>21.44 ± 0.31</p></td>
+</tr>
 </tbody>
 </table>
+<p style="text-align:justify;">
+Participants without access to the ISMRM/NIST phantom were encouraged to collect healthy human brain T1 maps following their institutional ethical guidelines and with participants' consent to participate in the challenge. To ensure consistency across datasets, single-slice positioning parallel to the AC-PC line was recommended. All submitted datasets and subsequent fitted T1 maps were to be uploaded to the data sharing website OSF.io, and thus participants were informed obtain consent for open-data sharing before scanning and to anonymize their data before submission. As the submitted single-slice inversion recovery images would be along the AC-PC line, they are unlikely to contain sufficient information facial identification, and therefore de-masking was not recommended. Participants who submitted human data for this challenge provided written confirmation to the organizers that their data for this challenge was in accordance with their institutional ethics committee (or equivalent regulatory body) and that the subjects had consented to sharing their data as described in the challenge.
+</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -449,11 +510,11 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="1_introduction.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Rationale and Challenge Pitch</p>
+            <p class="prev-next-title">Introduction</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="2-2_protocol.html" title="next page">
@@ -470,7 +531,7 @@ title="Print to PDF"
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By The Jupyter Book Community<br/>
+    By The Jupyter Book community<br/>
   
       &copy; Copyright 2022.<br/>
 </p>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Data Processing &#8212; My sample book</title>
+    <title>Fitting Model and Pipeline &#8212; 2020 T1 Reproducibility Challenge</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,10 +50,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Fitting Model and Pipeline" href="2-3-1_fitting.html" />
-    <link rel="prev" title="Protocol" href="2-2_protocol.html" />
+    <link rel="next" title="Image Labeling &amp; Registration" href="2-4-2_labelreg.html" />
+    <link rel="prev" title="Data Processing" href="2-4_dataprocessing.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -97,7 +99,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">My sample book</h1>
+      <h1 class="site-logo" id="site-title">2020 T1 Reproducibility Challenge</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -108,8 +110,8 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="index.html">
-                    Welcome to your Jupyter Book
+                <a class="reference internal" href="abstract.html">
+                    Abstract
                 </a>
             </li>
         </ul>
@@ -120,8 +122,8 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Rationale and Challenge Pitch
+  <a class="reference internal" href="1_introduction.html">
+   Introduction
   </a>
  </li>
 </ul>
@@ -141,8 +143,13 @@ const thebe_selector_output = ".output, .cell_output"
    Protocol
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2-3_datasubmissions.html">
+   Data Submissions
+  </a>
+ </li>
  <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+  <a class="reference internal" href="2-4_dataprocessing.html">
    Data Processing
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -150,19 +157,19 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2-3-1_fitting.html">
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Fitting Model and Pipeline
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="2-3-2_labelreg.html">
+    <a class="reference internal" href="2-4-2_labelreg.html">
      Image Labeling &amp; Registration
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="2-3-3_analysis.html">
+    <a class="reference internal" href="2-4-3_analysis.html">
      Analysis and Statistics
     </a>
    </li>
@@ -225,7 +232,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="conclusion.html">
+  <a class="reference internal" href="5_conclusion.html">
    Summary
   </a>
  </li>
@@ -338,7 +345,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/2-3_dataprocessing.md"
+        <a href="_sources/2-4-1_fitting.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -387,7 +394,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Data Processing</h1>
+                <h1>Fitting Model and Pipeline</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -399,11 +406,19 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="data-processing">
-<h1>Data Processing<a class="headerlink" href="#data-processing" title="Permalink to this headline">#</a></h1>
-<div class="toctree-wrapper compound">
-</div>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="fitting-model-and-pipeline">
+<h1>Fitting Model and Pipeline<a class="headerlink" href="#fitting-model-and-pipeline" title="Permalink to this headline">#</a></h1>
+<p style="text-align:justify;">
+A reduced-dimension non-linear least squares (RD-NLS) approach was used to fit the complex general inversion recovery signal equation: 
+</p>
+<div class="math notranslate nohighlight" id="equation-my-label">
+<span class="eqno">(1)<a class="headerlink" href="#equation-my-label" title="Permalink to this equation">#</a></span>\[S(TI) = a + be^{-TI/T_1}\]</div>
+<p style="text-align:justify;">
+where a and b are complex constants. This approach, introduced in (Barral et al. 2010), models the general T1 signal equation without approximating for a very long TR. The a and b constants inherently factor TR in them. Barral et al. shared the implementation of their fitting algorithm used in their paper. To facilitate its use in our pipelines, we used a wrapper around this code available in the open-source software qMRLab (Cabana et al. 2015; Karakuzu et al. 2020), which provides a standardized API to call the fitting in MATLAB/Octave scripts.
+</p>
+<p style="text-align:justify;">
+A Jupyter Notebook data processing pipeline was written using MATLAB/Octave. This pipeline automatically downloads all the datasets, loads each dataset configuration file, fits the T1 data voxel-wise, and exports the resulting T1 map to the NIfTI and PNG formats for quality assurance. This pipeline is available in a GitHub repository (https://github.com/rrsg2020/t1_fitting_pipeline, filename: RRSG_T1_fitting.ipynb). Once all submissions were collected and the pipeline was executed, the T1 maps were uploaded to OSF.io.
+</p></section>
 
     <script type="text/x-thebe-config">
     {
@@ -432,17 +447,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="2-2_protocol.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="2-4_dataprocessing.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Protocol</p>
+            <p class="prev-next-title">Data Processing</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="2-3-1_fitting.html" title="next page">
+    <a class='right-next' id="next-link" href="2-4-2_labelreg.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Fitting Model and Pipeline</p>
+        <p class="prev-next-title">Image Labeling &amp; Registration</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -453,7 +468,7 @@ title="Print to PDF"
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By The Jupyter Book Community<br/>
+    By The Jupyter Book community<br/>
   
       &copy; Copyright 2022.<br/>
 </p>

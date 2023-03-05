@@ -1,0 +1,13 @@
+# Analysis and Statistics
+
+<p style="text-align:justify;">
+Analysis code and scripts were developed and shared in a version-tracked public GitHub repository. Python-based Jupyter Notebooks were used for both the quality assurance and main analysis workflows. The computational environment requirements were containerized in Docker Docker (Merkel 2014; Boettiger 2015), allowing for an executable environment that can  reproduce the analysis in a web browser through MyBinder (Project Jupyter et al. 2018).  Backend Python files handled reference data, database handling, ROI masking, and general analysis tools, while configuration files managed the dataset information which were downloaded and pooled using a script (make_pooled_datasets.py). The databases were created using a reproducible Jupyter Notebook script and subsequently saved in the repository.
+</p>
+
+<p style="text-align:justify;">
+For the NIST phantom data, mean T1 values for each ROI were compared with temperature-corrected reference values and visualized in three different types of plots (linear axes, log-log axes, and error relative to the reference value). This comparison was repeated for individual measurements at each site and for all measurements grouped together. Temperature correction was carried out via interpolation of the set of reference NIST T1 values between 16 °C and 26 °C (2 °C intervals), listed in the phantom technical specifications. For the human datasets, a notebook was created to plot the mean and standard deviations for each tissue ROI from all submissions from all sites. All the quality assurance and analysis plot images were saved to the repository for ease-of-access and a timestamped version-controlled record of the state of the analysis figures. The database files of ROI values and acquisition details for all submissions were also saved to the repository.
+</p>
+
+<p style="text-align:justify;">
+An interactive dashboard was developed in Dash by Plotly (Plotly Technologies Inc. 2015) and hosted by NeuroLibre (Karakuzu et al. 2022) to provide an interactive approach for exploring the data, analysis, and statistics of the challenge results. The dashboard visualizes the mean, median, standard deviation, and coefficient of variations for each phantom sphere and brain ROI. The data was collected from the pre-prepared databases of masked ROI values and incorporated other database information, such as phantom version, temperature, MRI manufacturer, and reference values. The interactive dashboard displays these results for all measurements at all sites.
+</p>

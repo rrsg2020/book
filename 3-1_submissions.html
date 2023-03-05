@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Submissions &#8212; My sample book</title>
+    <title>Submissions &#8212; 2020 T1 Reproducibility Challenge</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Phantom results" href="3-2_nist.html" />
-    <link rel="prev" title="Analysis and Statistics" href="2-3-3_analysis.html" />
+    <link rel="prev" title="Analysis and Statistics" href="2-4-3_analysis.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -97,7 +97,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">My sample book</h1>
+      <h1 class="site-logo" id="site-title">2020 T1 Reproducibility Challenge</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -108,8 +108,8 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="index.html">
-                    Welcome to your Jupyter Book
+                <a class="reference internal" href="abstract.html">
+                    Abstract
                 </a>
             </li>
         </ul>
@@ -120,8 +120,8 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Rationale and Challenge Pitch
+  <a class="reference internal" href="1_introduction.html">
+   Introduction
   </a>
  </li>
 </ul>
@@ -141,8 +141,13 @@ const thebe_selector_output = ".output, .cell_output"
    Protocol
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2-3_datasubmissions.html">
+   Data Submissions
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="2-3_dataprocessing.html">
+  <a class="reference internal" href="2-4_dataprocessing.html">
    Data Processing
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -152,17 +157,17 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="2-3-1_fitting.html">
+    <a class="reference internal" href="2-4-1_fitting.html">
      Fitting Model and Pipeline
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="2-3-2_labelreg.html">
+    <a class="reference internal" href="2-4-2_labelreg.html">
      Image Labeling &amp; Registration
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="2-3-3_analysis.html">
+    <a class="reference internal" href="2-4-3_analysis.html">
      Analysis and Statistics
     </a>
    </li>
@@ -225,7 +230,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="conclusion.html">
+  <a class="reference internal" href="5_conclusion.html">
    Summary
   </a>
  </li>
@@ -338,7 +343,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/3-1_submissions.md"
+        <a href="_sources/3-1_submissions.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -349,7 +354,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -401,12 +406,12 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="submissions">
 <h1>Submissions<a class="headerlink" href="#submissions" title="Permalink to this headline">#</a></h1>
-<p>This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a> for more information.</p>
-<p>Check out the content pages bundled with this sample book to see more.</p>
-</section>
+<p style="text-align:justify;">
+Nineteen participants submitted data that were approved, which included 41 T1 maps of the NIST/system phantom, and 56 brain T1 maps. It should be noted that these numbers include a subset of measurements where both complex and magnitude-only data from the same acquisition were used to fit T1 maps, thus the total number of unique acquisitions is lower than the numbers reported above. The datasets were collected on three MRI manufacturers (Siemens, GE, Philips) and were acquired at 3.0 T, except for one dataset acquired at 350 mT. To showcase the heterogeneity of the independently-implemented submissions, Figure 2 displays six T1 maps of the phantoms submitted to the challenge.
+</p>
+<p style="text-align:justify;">
+Of these datasets, several submissions went beyond the minimum acquisition and acquired additional datasets using the NIST phantom, such as a traveling phantom (7 scanners), scan-rescan , same-day rescans on two MRIs, short TR vs long TR, and 4 point TI vs 14 point TI. For humans, one site acquired 13 subjects on three scanners (two manufacturers), one site acquired 6 subjects , and one site acquired a subject using two different head coils (20 channels vs. 64 channels).
+</p></section>
 
     <script type="text/x-thebe-config">
     {
@@ -435,7 +440,7 @@ It does not go in-depth into any particular topic - check out <a class="referenc
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="2-3-3_analysis.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="2-4-3_analysis.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
@@ -456,7 +461,7 @@ It does not go in-depth into any particular topic - check out <a class="referenc
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By The Jupyter Book Community<br/>
+    By The Jupyter Book community<br/>
   
       &copy; Copyright 2022.<br/>
 </p>

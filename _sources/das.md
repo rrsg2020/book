@@ -1,11 +1,5 @@
 # What was shared
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
-
-Check out the content pages bundled with this sample book to see more.
-
-```{tableofcontents}
-```
+<p style="text-align:justify;">
+All imaging data submitted to the challenge, dataset details, registered ROI maps, and processed T1 maps are hosted on OSF https://osf.io/ywc9g/. The dataset submissions and quality assurance were handled through GitHub issues in this repository https://github.com/rrsg2020/data_submission. Note that accepted submissions are closed issues, and that the GitHub branches associated with the issue numbers contain the Dockerfile and Jupyter Notebook scripts that reproduce these preliminary quality assurance results and can be run in a browser using MyBinder. The ROI registration scripts for the phantoms and T1 fitting pipeline to process all datasets are hosted in this GitHub repository, https://github.com/rrsg2020/t1_fitting_pipeline. All the analyses of the datasets were done using Jupyter Notebooks and are available in this repository, https://github.com/rrsg2020/analysis, which also contains a Dockerfile to reproduce the environment using a tool like MyBinder. A dashboard was developed to explore the datasets information and results in a browser, which is accessible here, https://rrsg2020.dashboards.neurolibre.org, and the code is also available on GitHub here https://github.com/rrsg2020/rrsg2020-dashboard. 
+</p>

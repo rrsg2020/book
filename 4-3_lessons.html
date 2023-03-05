@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Lessons Learned and Future Directions &#8212; My sample book</title>
+    <title>Lessons Learned and Future Directions &#8212; 2020 T1 Reproducibility Challenge</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Summary" href="conclusion.html" />
+    <link rel="next" title="Summary" href="5_conclusion.html" />
     <link rel="prev" title="Comparison with other studies" href="4-2_comparisons.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -97,7 +97,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">My sample book</h1>
+      <h1 class="site-logo" id="site-title">2020 T1 Reproducibility Challenge</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -108,8 +108,8 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="index.html">
-                    Welcome to your Jupyter Book
+                <a class="reference internal" href="abstract.html">
+                    Abstract
                 </a>
             </li>
         </ul>
@@ -120,8 +120,8 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Rationale and Challenge Pitch
+  <a class="reference internal" href="1_introduction.html">
+   Introduction
   </a>
  </li>
 </ul>
@@ -141,8 +141,13 @@ const thebe_selector_output = ".output, .cell_output"
    Protocol
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2-3_datasubmissions.html">
+   Data Submissions
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="2-3_dataprocessing.html">
+  <a class="reference internal" href="2-4_dataprocessing.html">
    Data Processing
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -152,17 +157,17 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="2-3-1_fitting.html">
+    <a class="reference internal" href="2-4-1_fitting.html">
      Fitting Model and Pipeline
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="2-3-2_labelreg.html">
+    <a class="reference internal" href="2-4-2_labelreg.html">
      Image Labeling &amp; Registration
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="2-3-3_analysis.html">
+    <a class="reference internal" href="2-4-3_analysis.html">
      Analysis and Statistics
     </a>
    </li>
@@ -225,7 +230,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="conclusion.html">
+  <a class="reference internal" href="5_conclusion.html">
    Summary
   </a>
  </li>
@@ -401,12 +406,12 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="lessons-learned-and-future-directions">
 <h1>Lessons Learned and Future Directions<a class="headerlink" href="#lessons-learned-and-future-directions" title="Permalink to this headline">#</a></h1>
-<p>This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a> for more information.</p>
-<p>Check out the content pages bundled with this sample book to see more.</p>
-</section>
+<p style="text-align:justify;">
+There are some important things to note about this challenge. Firstly, we’d like to highlight that the submissions for this challenge were due in March 2020, which was at the height of the early days of COVID-10 pandemic lockdown. Despite this, many participants were able to submit their datasets and continued to work on the challenge, so we’d like to extend our gratitude to those who could. The lockdowns did pose some challenges, as some groups intended on scanning more data, and others intended on submitting rescan data that they could no longer do.
+</p>
+<p style="text-align:justify;">
+This reproducibility challenge did not aim to determine a winning submission based on the most accurate measurements using the protocol. Instead, it aimed to compare differences between independently-implemented protocols. Crowning a winner was not feasible due to concerns that participants may have micro-optimized their inversion recovery protocols, leading to a broader range of differences in implementations across MRI vendors. Reflecting on this issue, one solution could have been to ask participants to acquire two datasets using the phantom – the original inversion recovery protocol by (Barral et al. 2010), and a second T1 mapping measurement using the rapid technique of their choice.The winner would have been the submission whose rapid T1 map closely matched the original inversion recovery protocol, while also being acquired in a clinically feasible time. This approach could help future qMRI reproducibility challenges in the future.
+</p></section>
 
     <script type="text/x-thebe-config">
     {
@@ -442,7 +447,7 @@ It does not go in-depth into any particular topic - check out <a class="referenc
             <p class="prev-next-title">Comparison with other studies</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="conclusion.html" title="next page">
+    <a class='right-next' id="next-link" href="5_conclusion.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Summary</p>
@@ -456,7 +461,7 @@ It does not go in-depth into any particular topic - check out <a class="referenc
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By The Jupyter Book Community<br/>
+    By The Jupyter Book community<br/>
   
       &copy; Copyright 2022.<br/>
 </p>

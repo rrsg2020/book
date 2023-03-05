@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Dashboard &#8212; My sample book</title>
+    <title>Dashboard &#8212; 2020 T1 Reproducibility Challenge</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -97,7 +97,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">My sample book</h1>
+      <h1 class="site-logo" id="site-title">2020 T1 Reproducibility Challenge</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -108,8 +108,8 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="index.html">
-                    Welcome to your Jupyter Book
+                <a class="reference internal" href="abstract.html">
+                    Abstract
                 </a>
             </li>
         </ul>
@@ -120,8 +120,8 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Rationale and Challenge Pitch
+  <a class="reference internal" href="1_introduction.html">
+   Introduction
   </a>
  </li>
 </ul>
@@ -141,8 +141,13 @@ const thebe_selector_output = ".output, .cell_output"
    Protocol
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2-3_datasubmissions.html">
+   Data Submissions
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="2-3_dataprocessing.html">
+  <a class="reference internal" href="2-4_dataprocessing.html">
    Data Processing
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -152,17 +157,17 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="2-3-1_fitting.html">
+    <a class="reference internal" href="2-4-1_fitting.html">
      Fitting Model and Pipeline
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="2-3-2_labelreg.html">
+    <a class="reference internal" href="2-4-2_labelreg.html">
      Image Labeling &amp; Registration
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="2-3-3_analysis.html">
+    <a class="reference internal" href="2-4-3_analysis.html">
      Analysis and Statistics
     </a>
    </li>
@@ -225,7 +230,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="conclusion.html">
+  <a class="reference internal" href="5_conclusion.html">
    Summary
   </a>
  </li>
@@ -401,12 +406,16 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="dashboard">
 <h1>Dashboard<a class="headerlink" href="#dashboard" title="Permalink to this headline">#</a></h1>
-<p>This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a> for more information.</p>
-<p>Check out the content pages bundled with this sample book to see more.</p>
-<iframe src="https://rrsg2020.dashboards.neurolibre.org" width="100%" height="1100px" style="border:none;"></iframe></section>
+<p style="text-align:justify;">
+To better disseminate the challenge results, a web-based dashboard was developed (Figure 8,  https://rrsg2020.dashboards.neurolibre.org). The landing page (Figure 8a) illustrates the relationship between the phantom and brain datasets submitted at different sites and which scanner vendors were used. Navigating to the phantom section leads you where you can view information about the submitted datasets, such as the mean/std/median/CoV for each sphere, % difference from the reference values, number of scans, and temperature (Figure 8b, left). Other options allow you to limit the results by specific versions of the phantom or the MRI manufacturer. Selecting either “By Sphere” (Figure 8b, right) or “By Site” tabs will display whisker plots for the selected options, enabling further exploration of the datasets.
+</p>
+<p style="text-align:justify;">
+Returning to the home page and selecting the brain section allows exploration of information on the brain datasets (Figure 8c, left), such as mean T1 and STD for different ROI regions, as well as selection of specific MRI manufacturers. Choosing the “By Regions” tab provides whisker plots of the datasets for the selected ROI (Figure 8c, right), similar to the plots for the phantom.
+</p><p style="text-align:justify;">
+<b>
+Figure 8. Dashboard. a) welcome page listing all the sites, the types of subject, and scanner, and the relationship between the three. b) dashboard tabs.
+</b>
+</p><iframe src="https://rrsg2020.dashboards.neurolibre.org" width="100%" height="1100px" style="border:none;"></iframe></section>
 
     <script type="text/x-thebe-config">
     {
@@ -456,7 +465,7 @@ It does not go in-depth into any particular topic - check out <a class="referenc
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By The Jupyter Book Community<br/>
+    By The Jupyter Book community<br/>
   
       &copy; Copyright 2022.<br/>
 </p>

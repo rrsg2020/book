@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Phantom results &#8212; My sample book</title>
+    <title>Phantom results &#8212; 2020 T1 Reproducibility Challenge</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -97,7 +97,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">My sample book</h1>
+      <h1 class="site-logo" id="site-title">2020 T1 Reproducibility Challenge</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -108,8 +108,8 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="index.html">
-                    Welcome to your Jupyter Book
+                <a class="reference internal" href="abstract.html">
+                    Abstract
                 </a>
             </li>
         </ul>
@@ -120,8 +120,8 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Rationale and Challenge Pitch
+  <a class="reference internal" href="1_introduction.html">
+   Introduction
   </a>
  </li>
 </ul>
@@ -141,8 +141,13 @@ const thebe_selector_output = ".output, .cell_output"
    Protocol
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2-3_datasubmissions.html">
+   Data Submissions
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="2-3_dataprocessing.html">
+  <a class="reference internal" href="2-4_dataprocessing.html">
    Data Processing
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -152,17 +157,17 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="2-3-1_fitting.html">
+    <a class="reference internal" href="2-4-1_fitting.html">
      Fitting Model and Pipeline
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="2-3-2_labelreg.html">
+    <a class="reference internal" href="2-4-2_labelreg.html">
      Image Labeling &amp; Registration
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="2-3-3_analysis.html">
+    <a class="reference internal" href="2-4-3_analysis.html">
      Analysis and Statistics
     </a>
    </li>
@@ -225,7 +230,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="conclusion.html">
+  <a class="reference internal" href="5_conclusion.html">
    Summary
   </a>
  </li>
@@ -431,6 +436,8 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="phantom-results">
 <h1>Phantom results<a class="headerlink" href="#phantom-results" title="Permalink to this headline">#</a></h1>
 <p style="text-align:justify;">
+An overview of the T1 results for the submitted NIST phantom datasets are displayed in Figure 3. The same data is presented in each column with different axes types (linear, log, and error) to better visualize the results. The left column (a,d) shows the mean T1 with their standard deviations in each of the 14 ROIs are plotted against temperature-corrected reference T1 values using linear axes for a representative dataset (a) and all datasets (d). The middle column (b,e) displays the same mean T1 datasets as (a,d) but using log-log axes. The right column (c,f) displays the error (%) of the measured T1 relative to the temperature-corrected NIST reference values; the dotted lines represent a ±10% error. Figure 3a shows a strong linear trend and slight underestimation (slope = 0.98, intercept = -14 ms) for this dataset in comparison to the reference T1 values. However, this trend breaks down for low T1 values (T1 < 100-200 ms), as seen in the log-log plot (Figure 3b), which was expected because the imaging protocol is optimized for human T1 values (T1 > 500 ms). Errors exceeding 10% are observed for T1 values of phantom spheres below this threshold (Figure 3c). These trends are observed for the entire-dataset plots as well (Figure 3d-f). More variability is seen in Figure 3d around the identity diagonal at very high T1 (T1 ~ 2000 ms) than towards the WM-GM values (T1 ~ 600-1400 ms), which is less apparent in the log-log plot (Figure 3e). In addition to the low T1 values exceeding the 10% error threshold (Figure 3f), a few measurements with outlier values (~3-4) human tissue range were observed in the human tissue range.
+</p><p style="text-align:justify;">
 <b>
 Figure 3. Measured mean T1 values vs. temperature-corrected NIST reference values of the phantom spheres presented as linear plots (a,d), log-log plots (b,e), and plots of the error relative to reference T1 value. Plots (a–c) are of an example single dataset, whereas plots (d–f) are of all acquired datasets.
 </b>
@@ -640,7 +647,19 @@ Figure 3. Measured mean T1 values vs. temperature-corrected NIST reference value
 <img alt="_images/3-2_nist_9_0.png" src="_images/3-2_nist_9_0.png" />
 </div>
 </div>
-</section>
+<p style="text-align:justify;">
+Inter-participant coefficient of variations (COV) were calculated by selecting one single T1 map submitted per challenge participant and calculating the COV of the T1  means per sphere. The average inter-participant COV across the first five spheres representing the expected range in the human brain was 6.1 % (sphere 1 = 4.7 %, sphere 2 = 3.1 %, sphere 3 = 6.3 %, sphere 4 = 12.8 %, sphere 5 = 7.3 %). Two sites were clear outliers that had particular issues for sphere 4, likely due to a combination of an implementation error and a resulting uncertainty of where the signal null lies for his four-TI measurement at that T1 value; by removing these outliers, the mean inter-participant COV reduces to 4.1 % (sphere 1 = 5.4 %, sphere 2 = 3. 5%, sphere 3 = 2.5 %, sphere 4 = 4.2 %, sphere 5 = 4.9 %). One participant measured T1 maps with one phantom using one implemented protocol at 7 different sites using a single manufacturer, and so a mean intra-participant COV across the first five spheres for this case was calculated to be 2.9 % (sphere 1 = 4.9 %, sphere 2 = 3.5 %, sphere 3 = 2.6 %, sphere 4 = 2.0 %, sphere 5 = 1.6 %). 
+</p><p style="text-align:justify;">
+<b>
+Figure 4. Scatter plot comparing complex and magnitude-only fitted data. The markers are color-coded based on the implementation site, while their size represents the difference (annotated for scale) between two cases of T1 estimations for each sphere (from 1 to 7).
+</b>
+</p><p style="text-align:justify;">
+Figure 4 compared the mean T1 values measured using complex and magnitude-only data for the 11 datasets where authors provided both in their submissions. Note that these datasets are from the same acquisition, not two unique acquisitions. Figure 4a shows that for the range of T1 values expected in the brain (T1 > 500 ms), there is almost no difference in fitted T1 values between the two types of data. However, for T1 values less than ~250 ms, there are large errors, which are likely due to poor fitting using a protocol that is not optimized for this range of T1 values. Voxel-wise scatterplots of these datasets are shown in Figure 4b, which exhibit a very strong correlation (stats), with only a few outlier voxels (out of #) for the brain-tissue range of T1 values.
+</p><p style="text-align:justify;">
+<b>
+Figure 5. Fill in
+</b>
+</p></section>
 
     <script type="text/x-thebe-config">
     {
@@ -690,7 +709,7 @@ Figure 3. Measured mean T1 values vs. temperature-corrected NIST reference value
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By The Jupyter Book Community<br/>
+    By The Jupyter Book community<br/>
   
       &copy; Copyright 2022.<br/>
 </p>
