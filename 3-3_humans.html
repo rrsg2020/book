@@ -438,7 +438,10 @@ Figure 6. Mean T1 values in two sets of ROIs, white matter (one 5x5 voxel ROI, g
 </b>
 </p><div class="cell tag_hide_input tag_remove_output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/rrsg2020/analysis.git
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span>
+
+<span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;analysis&#39;</span><span class="p">)</span><span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+    <span class="o">!</span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/rrsg2020/analysis.git
 
 <span class="c1"># Imports</span>
 <span class="kn">import</span> <span class="nn">warnings</span>
@@ -446,7 +449,6 @@ Figure 6. Mean T1 values in two sets of ROIs, white matter (one 5x5 voxel ROI, g
 
 <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">import</span> <span class="nn">nibabel</span> <span class="k">as</span> <span class="nn">nib</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
