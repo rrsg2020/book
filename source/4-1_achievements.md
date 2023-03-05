@@ -1,11 +1,10 @@
 # Achievements of the challenge
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+<p style="text-align:justify;">
 
-Check out the content pages bundled with this sample book to see more.
+</p>
+Nineteen research groups participated in a reproducibility challenge by independently-implementing an inversion recovery T1 mapping acquisition protocol and measuring a standard quantitative MRI phantom and/or human brains at 27 MRI sites, using three different vendors (GE, Philips, Siemens). The collaborative effort produced an open-source database of 97 T1 mapping datasets, including 41 ISMRM/NIST phantom and 56 human brain datasets. A standardized T1 processing pipeline was developed for different dataset types, including magnitude-only and complex data. Additionally, Jupyter notebooks that can be executed in containerized environments were developed for quality assurance visualization and analyses. An interactive web-based dashboard was also developed to allow for easy exploration of the challenge results in a web-browser.
 
-```{tableofcontents}
-```
+<p style="text-align:justify;">
+The challenge focused on exploring the reproducibility of the gold standard inversion recovery T1 mapping method reported in one paper (Barral et al. 2010). Participants were instructed to use the imaging protocol reported in this paper that was optimized for human brain T1 values. The paper also shared the necessary code to robustly process inversion recovery T1 mapping data, and is particularly effective even when using a shorter TR (TR ~ T1) than typically reported (TR ~ 5 T1). To evaluate the accuracy of the resulting T1 values, the challenge used the standard ISMRM/NIST phantom with fiducial spheres having T1 values expected in human brain tissue, ranging from 500 to 2000 ms (see Figure 3). As anticipated for this protocol, there was a decrease in the accuracy in measurements for spheres with T1 below 300 ms. Overall, the majority of the independently implemented imaging protocols from various sites resulted in good T1 estimates, with only a few exceptions. Using the NIST phantom, we report that sites that independently-implemented the imaging protocol resulted in an inter-participant mean COV (6.1 %) that was two-times higher than that for an intra-participant mean COV measured at seven sites (2.9 %). A similar trend was observed in vivo. Inter-participant COV for WM (genu) was 6.0 % and GM (cortex) was 16.5 % vs the intra-participant COV that was 2.9 % and 6.9%, with generally higher COVs relative to the phantom measurements likely due to biological variability.
+</p>

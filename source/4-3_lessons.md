@@ -1,11 +1,9 @@
 # Lessons Learned and Future Directions
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+<p style="text-align:justify;">
+There are some important things to note about this challenge. Firstly, we’d like to highlight that the submissions for this challenge were due in March 2020, which was at the height of the early days of COVID-10 pandemic lockdown. Despite this, many participants were able to submit their datasets and continued to work on the challenge, so we’d like to extend our gratitude to those who could. The lockdowns did pose some challenges, as some groups intended on scanning more data, and others intended on submitting rescan data that they could no longer do.
+</p>
 
-Check out the content pages bundled with this sample book to see more.
-
-```{tableofcontents}
-```
+<p style="text-align:justify;">
+This reproducibility challenge did not aim to determine a winning submission based on the most accurate measurements using the protocol. Instead, it aimed to compare differences between independently-implemented protocols. Crowning a winner was not feasible due to concerns that participants may have micro-optimized their inversion recovery protocols, leading to a broader range of differences in implementations across MRI vendors. Reflecting on this issue, one solution could have been to ask participants to acquire two datasets using the phantom – the original inversion recovery protocol by (Barral et al. 2010), and a second T1 mapping measurement using the rapid technique of their choice.The winner would have been the submission whose rapid T1 map closely matched the original inversion recovery protocol, while also being acquired in a clinically feasible time. This approach could help future qMRI reproducibility challenges in the future.
+</p>

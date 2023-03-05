@@ -2,21 +2,22 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: index
+root: abstract
 
 parts:
   - caption: Introduction
     chapters:
-    - file: intro
+    - file: 1_introduction
   - caption: Methods
     chapters:
     - file: 2-1_materials
     - file: 2-2_protocol
-    - file: 2-3_dataprocessing
+    - file: 2-3_datasubmissions
+    - file: 2-4_dataprocessing
       sections:
-      - file: 2-3-1_fitting
-      - file: 2-3-2_labelreg
-      - file: 2-3-3_analysis
+      - file: 2-4-1_fitting
+      - file: 2-4-2_labelreg
+      - file: 2-4-3_analysis
   - caption: Results
     chapters:
     - file: 3-1_submissions
@@ -30,7 +31,7 @@ parts:
     - file: 4-3_lessons
   - caption: Conclusion
     chapters:
-    - file: conclusion
+    - file: 5_conclusion
   - caption: Acknowledgements
     chapters:
     - file: acknowledgments

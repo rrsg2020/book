@@ -1,0 +1,5 @@
+# Summary
+
+<p style="text-align:justify;">
+The 2020 Reproducibility Challenge, jointly organized by the Reproducible Research and Quantitative MR ISMRM study groups, led to the creation of a large open database of standard quantitative MR phantom and human brain inversion recovery T1 maps. These maps were measured using independently-implemented imaging protocols on three different scanner manufacturers. All collected data, processing pipeline code, computational environment files, and analysis scripts were shared with the goal of promoting reproducible research practices. The differences in stability between independently-implemented (inter-participants) and centrally shared (intra-participant) protocols observed both in phantoms could help inform future meta-analyses of quantitative MRI metrics (Mancini et al. 2020) and better guide multi-center collaborations.
+</p>

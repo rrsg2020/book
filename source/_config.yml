@@ -1,8 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: My sample book
-author: The Jupyter Book Community
+title: 2020 T1 Reproducibility Challenge
 logo: logo.png
 
 # Force re-execution of notebooks on each build.
