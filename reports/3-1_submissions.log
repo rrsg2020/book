@@ -41,63 +41,48 @@ output_gif_name = 'NIST.gif'
 if not Path(data_folder_name).exists():
     make_pooled_dataset(configFile, data_folder_name)
 
-# Plot figure
-fig = plt.figure()
-
-#Set background color to white
-fig.set_facecolor("w")
-
-# Set scalebar range
-vmin = 0
-vmax = 3000
-
 with open(configFile) as json_file:
     configJson = json.load(json_file)
+    
+def get_image(dataset_name, key2):
+    # Load T1 image data
+    t1_file = configJson[dataset_name]['datasets'][key2]['imagePath']
+    t1 = nib.load(Path(data_folder_name) / t1_file)
+    t1_volume = t1.get_fdata() 
 
-ims = []
+    # Handle 2D vs 3D volume case
+    dims = t1_volume.shape
+    if (len(dims) == 2) or (np.min(dims) == 1):
+        im = np.rot90(t1_volume)
+    else:
+        index_smallest_dim = np.argmin(dims)
+        numberOfSlices = dims[index_smallest_dim]
+        midSlice = int(np.round(numberOfSlices/2))
 
-for dataset_name in configJson:
-    for key1 in configJson[dataset_name]:
-        if key1 == 'datasets':
-            for key2 in configJson[dataset_name][key1]:         
-                
-                # Load T1 image data
-                t1_file = configJson[dataset_name]['datasets'][key2]['imagePath']
-                t1 = nib.load(Path(data_folder_name) / t1_file)
-                t1_volume = t1.get_fdata() 
+        if index_smallest_dim == 0:
+            im = np.rot90(np.squeeze(t1_volume[midSlice,:,:]))
+        elif index_smallest_dim == 1:
+            im = np.rot90(np.squeeze(t1_volume[:,midSlice,:]))
+        elif index_smallest_dim == 2:
+            im = np.rot90(np.squeeze(t1_volume[:,:,midSlice]))
 
-                # Handle 2D vs 3D volume case
-                dims = t1_volume.shape
-                if (len(dims) == 2) or (np.min(dims) == 1):
-                    im = plt.imshow(np.rot90(t1_volume), cmap=parula_map, animated=True, vmin = vmin, vmax = vmax)
-                else:
-                    index_smallest_dim = np.argmin(dims)
-                    numberOfSlices = dims[index_smallest_dim]
-                    midSlice = int(np.round(numberOfSlices/2))
+    xAxis = np.linspace(0,im.shape[0]-1, num=im.shape[0])
+    yAxis = np.linspace(0,im.shape[1]-1, num=im.shape[1])
+    return im, xAxis, yAxis
 
-                    if index_smallest_dim == 0:
-                        im = plt.imshow(np.rot90(np.squeeze(t1_volume[midSlice,:,:])), cmap=parula_map, animated=True, vmin = vmin, vmax = vmax)
-                    elif index_smallest_dim == 1:
-                        im = plt.imshow(np.rot90(np.squeeze(t1_volume[:,midSlice,:])), cmap=parula_map, animated=True, vmin = vmin, vmax = vmax)
-                    elif index_smallest_dim == 2:
-                        im = plt.imshow(np.rot90(np.squeeze(t1_volume[:,:,midSlice])), cmap=parula_map, animated=True, vmin = vmin, vmax = vmax)
-                
-                # Add filename text to image
-                ttl = plt.text(0, 280, Path(t1_file).name, fontsize=6, horizontalalignment='left', verticalalignment='top')
-                
-                ims.append([im, ttl])
 
-# Save all images to GIF
-plt.colorbar()
-plt.clim(vmin,vmax)
+im_1, xAxis_1, yAxis_1 = get_image('wang_MDAnderson_NIST', 'day2_mag')
 
-ani = animation.ArtistAnimation(fig, ims, interval=500, blit=False,repeat_delay=1000)
+im_2, xAxis_2, yAxis_2 = get_image('CStehningPhilipsClinicalScienceGermany_NIST', 'Bonn_MR1_magnitude')
 
-output_gif_folder.mkdir(parents=True, exist_ok=True)
-ani.save(output_gif_folder / output_gif_name, dpi=100, writer='imagemagick')
+im_3, xAxis_3, yAxis_3 = get_image('mrel_usc_NIST', 'Session1_MR1')
 
-plt.close()
+im_4, xAxis_4, yAxis_4 = get_image('karakuzu_polymtl_NIST', 'mni')
 
+im_5, xAxis_5, yAxis_5 = get_image('madelinecarr_lha_NIST', 'one')
+
+im_6, xAxis_6, yAxis_6 = get_image('matthewgrechsollars_ICL_NIST', 'magnitude')
+im_6 = np.flipud(im_6)
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
