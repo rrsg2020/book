@@ -1,6 +1,6 @@
 # Abstract
 
-## Results of the ISMRM 2020 Joint Reproducible Research & Quantitative MR Study Groups Reproducibility Challenge on T1 mapping
+#### Results of the ISMRM 2020 Joint Reproducible Research & Quantitative MR Study Groups Reproducibility Challenge on T1 mapping
 
 <p style="text-align:justify;">
 <b>Purpose:</b> T1 mapping is a widely used quantitative MRI technique, but its reproducibility remains inconsistent among research groups. In 2019, the ISMRM Reproducible Research study group (RRSG) and Quantitative MR study group (qMRSG) jointly launched a T1 mapping reproducibility challenge. The goal was to explore if an independently-implemented imaging protocol at multiple centers could reliably measure T1 using inversion recovery in a standardized phantom. 
