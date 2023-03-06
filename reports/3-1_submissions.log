@@ -1,0 +1,114 @@
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Imports
+
+from pathlib import Path
+import pandas as pd
+import json
+import nibabel as nib
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+from IPython.display import Video
+import glob
+from analysis.src.plots import *
+from analysis.make_pooled_datasets import *
+
+# Configurations
+configFile = Path('analysis/configs/3T_NIST_T1maps.json')
+data_folder_name = 'analysis/3T_NIST_T1maps'
+output_gif_folder = Path("analysis/plots/01-wholedataset_gif_NIST/")
+output_gif_name = 'NIST.gif'
+
+# Download datasets
+if not Path(data_folder_name).exists():
+    make_pooled_dataset(configFile, data_folder_name)
+
+# Plot figure
+fig = plt.figure()
+
+#Set background color to white
+fig.set_facecolor("w")
+
+# Set scalebar range
+vmin = 0
+vmax = 3000
+
+with open(configFile) as json_file:
+    configJson = json.load(json_file)
+
+ims = []
+
+for dataset_name in configJson:
+    for key1 in configJson[dataset_name]:
+        if key1 == 'datasets':
+            for key2 in configJson[dataset_name][key1]:         
+                
+                # Load T1 image data
+                t1_file = configJson[dataset_name]['datasets'][key2]['imagePath']
+                t1 = nib.load(Path(data_folder_name) / t1_file)
+                t1_volume = t1.get_fdata() 
+
+                # Handle 2D vs 3D volume case
+                dims = t1_volume.shape
+                if (len(dims) == 2) or (np.min(dims) == 1):
+                    im = plt.imshow(np.rot90(t1_volume), cmap=parula_map, animated=True, vmin = vmin, vmax = vmax)
+                else:
+                    index_smallest_dim = np.argmin(dims)
+                    numberOfSlices = dims[index_smallest_dim]
+                    midSlice = int(np.round(numberOfSlices/2))
+
+                    if index_smallest_dim == 0:
+                        im = plt.imshow(np.rot90(np.squeeze(t1_volume[midSlice,:,:])), cmap=parula_map, animated=True, vmin = vmin, vmax = vmax)
+                    elif index_smallest_dim == 1:
+                        im = plt.imshow(np.rot90(np.squeeze(t1_volume[:,midSlice,:])), cmap=parula_map, animated=True, vmin = vmin, vmax = vmax)
+                    elif index_smallest_dim == 2:
+                        im = plt.imshow(np.rot90(np.squeeze(t1_volume[:,:,midSlice])), cmap=parula_map, animated=True, vmin = vmin, vmax = vmax)
+                
+                # Add filename text to image
+                ttl = plt.text(0, 280, Path(t1_file).name, fontsize=6, horizontalalignment='left', verticalalignment='top')
+                
+                ims.append([im, ttl])
+
+# Save all images to GIF
+plt.colorbar()
+plt.clim(vmin,vmax)
+
+ani = animation.ArtistAnimation(fig, ims, interval=500, blit=False,repeat_delay=1000)
+
+output_gif_folder.mkdir(parents=True, exist_ok=True)
+ani.save(output_gif_folder / output_gif_name, dpi=100, writer='imagemagick')
+
+plt.close()
+
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [0;32mIn[1], line 12[0m
+[1;32m     10[0m [38;5;28;01mfrom[39;00m [38;5;21;01mIPython[39;00m[38;5;21;01m.[39;00m[38;5;21;01mdisplay[39;00m [38;5;28;01mimport[39;00m Video
+[1;32m     11[0m [38;5;28;01mimport[39;00m [38;5;21;01mglob[39;00m
+[0;32m---> 12[0m [38;5;28;01mfrom[39;00m [38;5;21;01manalysis[39;00m[38;5;21;01m.[39;00m[38;5;21;01msrc[39;00m[38;5;21;01m.[39;00m[38;5;21;01mplots[39;00m [38;5;28;01mimport[39;00m [38;5;241m*[39m
+[1;32m     13[0m [38;5;28;01mfrom[39;00m [38;5;21;01manalysis[39;00m[38;5;21;01m.[39;00m[38;5;21;01mmake_pooled_datasets[39;00m [38;5;28;01mimport[39;00m [38;5;241m*[39m
+[1;32m     15[0m [38;5;66;03m# Configurations[39;00m
+
+[0;31mModuleNotFoundError[0m: No module named 'analysis'
+ModuleNotFoundError: No module named 'analysis'
+
