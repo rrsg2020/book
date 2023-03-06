@@ -1,7 +1,6 @@
 # Achievements of the challenge
 
 <p style="text-align:justify;">
-
 Nineteen research groups participated in a reproducibility challenge by independently-implementing an inversion recovery T1 mapping acquisition protocol and measuring a standard quantitative MRI phantom and/or human brains at 27 MRI sites, using three different vendors (GE, Philips, Siemens). The collaborative effort produced an open-source database of 97 T1 mapping datasets, including 41 ISMRM/NIST phantom and 56 human brain datasets. A standardized T1 processing pipeline was developed for different dataset types, including magnitude-only and complex data. Additionally, Jupyter notebooks that can be executed in containerized environments were developed for quality assurance visualization and analyses. An interactive web-based dashboard was also developed to allow for easy exploration of the challenge results in a web-browser.
 </p>
 
